@@ -10821,6 +10821,18 @@
   ],
   "auditLogs": [
     {
+      "id": "aud_1795320889495_bcwy",
+      "userId": "usr_inst_001",
+      "userEmail": "instructor@ysminfotech.com",
+      "action": "DEMO_LOGIN",
+      "entityType": "User",
+      "entityId": "usr_inst_001",
+      "details": {
+        "role": "instructor"
+      },
+      "createdAt": "2026-11-22T04:14:49.495Z"
+    },
+    {
       "id": "aud_1795270741450_96fy",
       "userId": "usr_admin_001",
       "userEmail": "admin@ysminfotech.com",

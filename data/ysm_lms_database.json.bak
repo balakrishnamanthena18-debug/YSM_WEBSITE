@@ -10821,6 +10821,19 @@
   ],
   "auditLogs": [
     {
+      "id": "aud_1795270741450_96fy",
+      "userId": "usr_admin_001",
+      "userEmail": "admin@ysminfotech.com",
+      "action": "COUPON_STATUS_TOGGLED",
+      "entityType": "Coupon",
+      "entityId": "cpn_career50",
+      "details": {
+        "code": "CAREER50",
+        "isActive": true
+      },
+      "createdAt": "2026-11-21T14:19:01.450Z"
+    },
+    {
       "id": "aud_1795270740901_9u73",
       "userId": "usr_admin_001",
       "userEmail": "admin@ysminfotech.com",
