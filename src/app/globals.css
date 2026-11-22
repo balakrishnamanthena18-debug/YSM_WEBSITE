@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* =========================================================================
+     OFFICIAL YSM INFOTECH BRAND DESIGN SYSTEM
+     Built around the geometric bird symbol and official certification identity
+     ========================================================================= */
+  --color-primary-teal: #16b6b8;
+  --color-deep-teal: #176b68;
+  --color-dark-teal: #104e4d;
+  --color-aqua: #5bc4cc;
+  --color-primary-text: #111817;
+  --color-secondary-text: #586765;
+  --color-background: #ffffff;
+  --color-soft-background: #f5f9f8;
+  --color-border: #e3ecea;
+  --color-dark-section: #102e2d;
+
+  /* Typography Roles */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  
+  --max-width-content: 1380px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111817;
+  --primary-teal: #16b6b8;
+  --deep-teal: #176b68;
+  --dark-teal: #104e4d;
+  --aqua: #5bc4cc;
+  --primary-text: #111817;
+  --secondary-text: #586765;
+  --soft-bg: #f5f9f8;
+  --border: #e3ecea;
+  --dark-section: #102e2d;
+  
+  /* Motion System */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111817;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Subtle Architectural Grid Lines in YSM Teal */
+.hero-architectural-grid {
+  background-size: 72px 72px;
+  background-image: 
+    linear-gradient(to right, rgba(22, 182, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 182, 184, 0.05) 1px, transparent 1px);
+}
+
+/* Keyframe Entrance Animations */
+@keyframes heroEntranceFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroEntranceFadeUp 700ms var(--ease-editorial) forwards;
+}
+
+.animate-hero-image {
+  animation: heroImageReveal 800ms var(--ease-editorial) forwards;
+}
+
+.delay-1 {
+  animation-delay: 100ms;
+}
+
+.delay-2 {
+  animation-delay: 200ms;
+}
+
+.delay-3 {
+  animation-delay: 300ms;
+}
+
+.delay-4 {
+  animation-delay: 400ms;
+}
+
+/* Slowly Breathing Background Glow in Teal */
+@keyframes backgroundBreathing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.05;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.08;
+  }
+}
+
+.animate-bg-breathe {
+  animation: backgroundBreathing 14s ease-in-out infinite;
+}
+
+/* Technology Logo Marquee */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-scroll {
+  animation: marqueeScroll 45s linear infinite;
+  will-change: transform;
+}
+
+/* Multi-Row Career Destinations Marquee Animations */
+@keyframes marqueeScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+
+@keyframes marqueeScrollRight {
+  0% {
+    transform: translate3d(-25%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marqueeScrollLeft 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  animation: marqueeScrollRight 48s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow {
+  animation: marqueeScrollLeft 45s linear infinite;
+  will-change: transform;
+}
+
+/* Subtle Floating & Pulse for Art-Directed Visual Compositions */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSlowReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatSlowReverse 8s ease-in-out infinite;
+}
+
+/* Disable continuous animations on mobile devices for peak performance */
+@media (max-width: 768px) {
+  .animate-bg-breathe,
+  .animate-float-slow,
+  .animate-float-reverse {
+    animation: none !important;
+  }
+}
+
+/* Accessibility: respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <path d="M152 4H196V48H152V4ZM170 34H178V18H170V34Z" fill="#000000"/>
+  <path d="M162 10L178 26L162 42V10Z" fill="#ED1C24" opacity="0"/>
+  <!-- AMD clean iconic vector typography -->
+  <g fill="#000000">
+    <path d="M22 4L0 48H16L20 40H36L40 48H56L34 4H22ZM28 16L32 30H24L28 16Z"/>
+    <path d="M62 4H76L88 28L100 4H114V48H100V24L90 44H86L76 24V48H62V4Z"/>
+    <path d="M122 4H146C156 4 164 12 164 26C164 40 156 48 146 48H122V4ZM136 36H144C148 36 150 32 150 26C150 20 148 16 144 16H136V36Z"/>
+  </g>
+  <g fill="#007934">
+    <path d="M174 4H196V26L185 15L174 26V4Z"/>
+    <path d="M196 26V48H174V26L185 37L196 26Z"/>
+  </g>
+</svg>
+
